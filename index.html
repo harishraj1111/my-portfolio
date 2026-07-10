@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height:1.6;
+            background:#1c1c1e; /* Deep matte charcoal black background */
+            color:#a1a1a6; /* Soft, muted grey for body text to reduce eye strain */
+            letter-spacing: 0.5px;
+        }
+
+        header{
+            background:#1c1c1e; /* Seamlessly blends into the body */
+            color:white;
+            padding:40px 20px;
+            text-align:center;
+            border-bottom: 1px solid #2c2c2e; /* Ultra-thin subtle structural line */
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -1px; /* Slightly tight tracking for a high-end editorial feel */
+            color: #ffffff;
+        }
+
+        header p {
+            color: #8e8e93; 
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px; /* Wide spacing on subtitle to mimic design agency layouts */
+            margin-top: 5px;
+        }
+
+        nav{
+            margin-top:25px;
+        }
+
+        nav a{
+            color:#e5e5ea;
+            text-decoration:none;
+            margin:0 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover{
+            color:#ffffff; /* Stark bright white on hover */
+        }
+
+        .container{
+            width:90%;
+            max-width:1100px;
+            margin:auto;
+            padding:20px;
+        }
+
+        section{
+            background:#2c2c2e; /* Slightly lighter charcoal container tile */
+            margin:40px 0;
+            padding:35px;
+            border-radius: 0px; /* Completely square, sharp edges to mirror the layout */
+            border: 1px solid #3a3a3c; /* Sharp crisp framing */
+            box-shadow: none; /* Drop shadows are removed entirely for a true flat look */
+        }
+
+        h2, h3{
+            color:#ffffff; /* Headings pop cleanly out of the dark mode */
+            font-weight: 600;
+            margin-bottom:20px;
+            letter-spacing: -0.5px;
+        }
+
+        .about{
+            display:flex;
+            align-items:center;
+            gap:30px;
+        }
+
+        .about img{
+            width:180px;
+            height:180px;
+            border-radius:50%; /* Makes the profile picture a perfect round circle */
+            object-fit:cover;
+            filter: grayscale(100%);
+            border: 2px solid #3a3a3c; /* Sleek, thin dark frame to blend with the style */
+            transition: all 0.3s ease;
+        }
+
+        .about img:hover {
+            filter: grayscale(0%);
+            border-color: #0a84ff; /* Optional: circle border glows blue when you hover over it! */
+        }
+
+        .projects{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
+        }
+
+        .card{
+            background:#1c1c1e; /* Cards drop back into the dark body tone */
+            padding:25px;
+            border: 1px solid #3a3a3c;
+            border-radius:0px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .card h3 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #8e8e93;
+            font-size: 0.95rem;
+        }
+
+        .card:hover{
+            border-color:#ffffff; /* Simple, powerful crisp white frame outline on hover */
+            background:#2c2c2e;
+            transform: translateY(-2px);
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+            background:#1c1c1e;
+        }
+
+        table, th, td{
+            border:1px solid #3a3a3c;
+        }
+
+        th{
+            background:#2c2c2e;
+            color:#ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        th, td{
+            padding:14px;
+            text-align:center;
+        }
+
+        td {
+            color: #aeaeb2;
+        }
+
+        ul{
+            margin-left:25px;
+            color: #aeaeb2;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .contact p {
+            color: #aeaeb2;
+            margin-bottom: 12px;
+        }
+
+        .contact a{
+            color: #0a84ff; /* A clean, bright premium neon blue that pops perfectly on dark mode */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .contact a:hover{
+            color: #5ac8fa; /* Lightens into a soft sky blue when you hover over it */
+            text-decoration: underline;
+        }
+
+        footer{
+            text-align:center;
+            background:#1c1c1e;
+            color:#636366;
+            padding:30px;
+            margin-top:60px;
+            border-top: 1px solid #2c2c2e;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        @media(max-width:768px){
+            .about{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .projects{
+                grid-template-columns:1fr;
+            }
+
+            nav a{
+                display:block;
+                margin:12px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Harish Raj</h1>
+    <p>Aspiring IT Professional & Developer</p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about">
+            <img src="c:\Users\User\Downloads\photo_6228666426155799261_y.jpg" alt="Profile Picture">
+
+            <div>
+                <p>
+                    Hello buddies it's Harish here!
+                    I am an Information Technology student currently pursuing my Diploma.
+                    I have interest in core programming logic as well as web design and building things with clean structures.
+                    I enjoy taking academic concepts and turning them into functional application systems.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="card">
+                <h3>Library Management System</h3>
+                <p>A system focused on object-oriented structures built to handle book registration, tracking, issuing records and user databases effectively.</p>
+            </div>
+
+            <div class="card">
+                <h3>Car Rental Management System</h3>
+                <p>Developed an application handling core business logic, calculating rental durations, managing vehicle availability data and processing user bookings.</p>
+            </div>
+
+            <div class="card">
+                <h3>Personal Portfolio Website</h3>
+                <p>A responsive personal portfolio website built with a clean layout web interface using HTML, CSS and JavaScript.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills & Achievements</h2>
+
+        <h3>Technical Skills</h3>
+
+        <ul>
+            <li>C++ Programming</li>
+            <li>HTML5</li>
+            <li>Git & GitHub</li>
+            <li>Basic JavaScript</li>
+            <li>Core Software Design & Logic Development</li>
+        </ul>
+
+        <h3 style="margin-top:20px;">Achievements</h3>
+
+        <table>
+            <tr>
+                <th>Achievement</th>
+                <th>Certification</th>
+            </tr>
+
+            <tr>
+                <td>Deans List Award</td>
+                <td>Academic Excellence in IT Core Subjects</td>
+            </tr>
+
+            <tr>
+                <td>Core Application Development Project</td>
+                <td>Successfully deployed Object-Oriented Rental & Management Software</td>
+            </tr>
+
+            <tr>
+                <td>Responsive UI/UX Development Certification</td>
+                <td>Self-paced exploration of modern web layouts and styling rules</td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>Email:
+            <a href="mailto:mc240929399@student.unitar.my">
+                mc240929399@student.unitar.my
+            </a>
+        </p>
+
+        <p>Instagram:
+            <a href="https://www.instagram.com/hxrish_1111/#" target="_blank">
+                hxrish_1111
+            </a>
+        </p>
+
+        <p>GitHub:
+            <a href="https://github.com/harishraj1111/" target="_blank">
+                harishraj1111
+            </a>
+        </p>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Harish Raj </p>
+</footer>
+
+</body>
+</html>
