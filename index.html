@@ -15,8 +15,8 @@
         body{
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height:1.6;
-            background:#0b0f19; /* Deep tech midnight background */
-            color:#94a3b8; /* Crisp slate grey for high readability */
+            background:#0b0f19;
+            color:#94a3b8;
             letter-spacing: 0.5px;
         }
 
@@ -25,13 +25,13 @@
             color:white;
             padding:60px 20px 40px 20px;
             text-align:center;
-            border-bottom: 1px solid #1e293b; /* Clean, dark structural line */
+            border-bottom: 1px solid #1e293b;
         }
 
         header h1 {
             font-size: 2.8rem;
             font-weight: 700;
-            letter-spacing: -1px; /* Slightly tight tracking for a high-end editorial feel */
+            letter-spacing: -1px;
             color: #ffffff;
         }
 
@@ -39,7 +39,7 @@
             color: #8e8e93; 
             font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 2px; /* Wide spacing on subtitle to mimic design agency layouts */
+            letter-spacing: 2px;
             margin-top: 8px;
         }
 
@@ -57,7 +57,7 @@
         }
 
         nav a:hover{
-            color:#ffffff; /* Stark bright white on hover */
+            color:#ffffff;
         }
 
         .container{
@@ -68,21 +68,21 @@
         }
 
         section{
-            background:#131a26; /* Lighter container block for depth */
+            background:#131a26;
             margin:40px 0;
             padding:40px;
-            border-radius: 6px; /* Soft modern curve */
-            border: 1px solid #1e293b; /* Subtle structural framing */
+            border-radius: 6px;
+            border: 1px solid #1e293b;
             transition: all 0.3s ease;
         }
 
         section:hover {
-            border-color: #0a84ff; /* Tech neon blue border on hover */
+            border-color: #0a84ff;
             box-shadow: 0 0 15px rgba(10, 132, 255, 0.15);
         }
 
         h2, h3{
-            color:#ffffff; /* Headings pop cleanly out of the dark mode */
+            color:#ffffff;
             font-weight: 600;
             margin-bottom:20px;
             letter-spacing: -0.5px;
@@ -97,9 +97,9 @@
         .about img{
             width:180px;
             height:180px;
-            border-radius:50%; /* Makes the profile picture a perfect round circle */
+            border-radius:50%;
             object-fit:cover;
-            filter: grayscale(40%); /* Subtle desaturation to blend with tech look */
+            filter: grayscale(40%);
             border: 2px solid #233554;
             transition: all 0.3s ease;
             flex-shrink: 0;
@@ -107,7 +107,7 @@
 
         .about img:hover {
             filter: grayscale(0%);
-            border-color: #5ac8fa; /* Neon accent color trigger */
+            border-color: #5ac8fa;
             box-shadow: 0 0 15px rgba(90, 200, 250, 0.4);
         }
 
@@ -122,9 +122,9 @@
         }
 
         .card{
-            background:#0b0f19; /* Cards sink cleanly into the base midnight background */
+            background:#0b0f19;
             padding:25px;
-            border: 1px solid #233554; /* Tech blue boundaries */
+            border: 1px solid #233554;
             border-radius:4px;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
@@ -141,10 +141,10 @@
         }
 
         .card:hover{
-            border-color:#5ac8fa; /* Vivid cyber blue highlight outline */
+            border-color:#5ac8fa;
             background:#131a26;
             transform: translateY(-2px);
-            box-shadow: 0 0 12px rgba(90, 200, 250, 0.2); /* Neon card glow */
+            box-shadow: 0 0 12px rgba(90, 200, 250, 0.2);
         }
 
         ul{
@@ -156,7 +156,6 @@
             margin-bottom: 8px;
         }
 
-        /* --- BULLETPROOF FLEXBOX ACCORDION LAYOUT FOR ACHIEVEMENTS --- */
         .achievements-container {
             width: 100%;
             margin-top: 20px;
@@ -205,14 +204,14 @@
         }
 
         .contact a{
-            color: #0a84ff; /* Bright premium neon blue link */
+            color: #0a84ff;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.2s ease;
         }
 
         .contact a:hover{
-            color: #5ac8fa; /* Sky cyber blue color change on hover */
+            color: #5ac8fa;
             text-decoration: underline;
         }
 
@@ -228,7 +227,6 @@
             text-transform: uppercase;
         }
 
-        /* --- ADVANCED MOBILE OPTIMIZATIONS CONTAINER --- */
         @media(max-width:768px){
             header {
                 padding: 40px 15px 30px 15px;
@@ -244,7 +242,7 @@
             }
 
             section {
-                padding: 25px 15px; /* Safely drops interior margins to protect elements */
+                padding: 25px 15px;
                 margin: 25px 0;
             }
 
@@ -269,13 +267,12 @@
                 margin:8px 12px;
             }
 
-            /* FLEXBOX TABLE-TO-CARDS SYSTEM AUTOMATION FOR PHONES */
             .achievement-row {
-                flex-direction: column; /* Collapses horizontal columns layout down to a clean grid line */
+                flex-direction: column;
             }
             
             .header-row {
-                display: none; /* Safely strips layout titles since headings become cards */
+                display: none;
             }
             
             .col-left, .col-right {
@@ -285,7 +282,7 @@
             }
             
             .col-left {
-                background: #131a26; /* Separates each entry with clear block visual containers */
+                background: #131a26;
                 color: #ffffff;
                 border-bottom: 1px solid rgba(35, 53, 84, 0.4);
             }
@@ -317,7 +314,7 @@
         <h2>About Me</h2>
 
         <div class="about">
-            <img src="profile.jpg" alt="Profile Picture">
+            <img src="profile.jpg">
 
             <div class="about-text">
                 <p>
