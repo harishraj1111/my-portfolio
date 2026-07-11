@@ -6,290 +6,157 @@
     <title>Harish Raj | Portfolio</title>
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b0f19;
+            color: #94a3b8;
+            margin: 0;
+            padding: 0;
         }
 
-        body{
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            line-height:1.6;
-            background:#0b0f19;
-            color:#94a3b8;
-            letter-spacing: 0.5px;
-        }
-
-        header{
-            background:#0b0f19;
-            color:white;
-            padding:60px 20px 40px 20px;
-            text-align:center;
-            border-bottom: 1px solid #1e293b;
+        header {
+            background-color: #131a26;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 10px;
+            border-bottom: 2px solid #233554;
         }
 
         header h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-            color: #ffffff;
+            margin: 0;
+            font-size: 2.5rem;
         }
 
         header p {
-            color: #8e8e93; 
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-top: 8px;
+            color: #8e8e93;
+            font-size: 1rem;
+            margin-top: 5px;
         }
 
-        nav{
-            margin-top:30px;
+        nav {
+            margin-top: 15px;
         }
 
-        nav a{
-            color:#e5e5ea;
-            text-decoration:none;
-            margin:0 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.2s ease;
+        nav a {
+            color: #0a84ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
         }
 
-        nav a:hover{
-            color:#ffffff;
+        nav a:hover {
+            text-decoration: underline;
         }
 
-        .container{
-            width:90%;
-            max-width:1100px;
-            margin:auto;
-            padding:20px;
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
         }
 
-        section{
-            background:#131a26;
-            margin:40px 0;
-            padding:40px;
-            border-radius: 6px;
-            border: 1px solid #1e293b;
-            transition: all 0.3s ease;
-        }
-
-        section:hover {
-            border-color: #0a84ff;
-            box-shadow: 0 0 15px rgba(10, 132, 255, 0.15);
-        }
-
-        h2, h3{
-            color:#ffffff;
-            font-weight: 600;
-            margin-bottom:20px;
-            letter-spacing: -0.5px;
-        }
-
-        .about{
-            display:flex;
-            align-items:center;
-            gap:40px;
-        }
-
-        .about img{
-            width:180px;
-            height:180px;
-            border-radius:50%;
-            object-fit:cover;
-            filter: grayscale(40%);
+        .section-box {
+            background-color: #131a26;
+            margin: 30px 0;
+            padding: 25px;
             border: 2px solid #233554;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
+            border-radius: 8px;
         }
 
-        .about img:hover {
-            filter: grayscale(0%);
-            border-color: #5ac8fa;
-            box-shadow: 0 0 15px rgba(90, 200, 250, 0.4);
-        }
-
-        .about-text p {
-            font-size: 1.05rem;
-        }
-
-        .projects{
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:25px;
-        }
-
-        .card{
-            background:#0b0f19;
-            padding:25px;
-            border: 1px solid #233554;
-            border-radius:4px;
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        .card h3 {
+        h2 {
             color: #ffffff;
-            margin-bottom: 10px;
+            border-bottom: 1px solid #233554;
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .about-section {
+            text-align: center;   
+        }
+
+        .about-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0a84ff;
+            margin-bottom: 15px;
+        }
+
+        .about-text {
+            text-align: left;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .project-block {
+            background-color: #0b0f19;
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #233554;
+            border-radius: 4px;
+        }
+
+        .project-block h4 {
+            color: #ffffff;
+            margin: 0 0 5px 0;
             font-size: 1.2rem;
         }
 
-        .card p {
-            color: #8e8e93;
+        .project-block p {
+            margin: 0;
             font-size: 0.95rem;
         }
 
-        .card:hover{
-            border-color:#5ac8fa;
-            background:#131a26;
-            transform: translateY(-2px);
-            box-shadow: 0 0 12px rgba(90, 200, 250, 0.2);
+        ul {
+            padding-left: 20px;
         }
 
-        ul{
-            margin-left:25px;
-            color: #aeaeb2;
-        }
-        
         ul li {
             margin-bottom: 8px;
         }
 
-        .achievements-container {
-            width: 100%;
-            margin-top: 20px;
+        .achievement-card {
+            background-color: #0b0f19;
             border: 1px solid #233554;
+            padding: 15px;
+            margin-top: 10px;
             border-radius: 4px;
-            background: #0b0f19;
         }
 
-        .achievement-row {
-            display: flex;
-            border-bottom: 1px solid #233554;
-        }
-
-        .achievement-row:last-child {
-            border-bottom: none;
-        }
-
-        .header-row {
-            background: #131a26;
+        .achievement-title {
             color: #ffffff;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        .col-left {
-            width: 40%;
-            padding: 14px;
-            border-right: 1px solid #233554;
-            display: flex;
-            align-items: center;
+        /* --- Contact Links --- */
+        .contact-links p {
+            margin: 10px 0;
         }
 
-        .col-right {
-            width: 60%;
-            padding: 14px;
-            color: #aeaeb2;
-            display: flex;
-            align-items: center;
-        }
-
-        .contact p {
-            color: #aeaeb2;
-            margin-bottom: 12px;
-        }
-
-        .contact a{
+        .contact-links a {
             color: #0a84ff;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s ease;
         }
 
-        .contact a:hover{
-            color: #5ac8fa;
+        .contact-links a:hover {
             text-decoration: underline;
         }
 
-        footer{
-            text-align:center;
-            background:#0b0f19;
-            color:#636366;
-            padding:40px;
-            margin-top:60px;
-            border-top: 1px solid #1e293b;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        @media(max-width:768px){
-            header {
-                padding: 40px 15px 30px 15px;
-            }
-
-            header h1 {
-                font-size: 2.2rem;
-            }
-
-            .container {
-                width: 95%;
-                padding: 10px;
-            }
-
-            section {
-                padding: 25px 15px;
-                margin: 25px 0;
-            }
-
-            .about{
-                flex-direction:column;
-                text-align:center;
-                gap: 20px;
-            }
-
-            .about img {
-                width: 150px;
-                height: 150px;
-            }
-
-            .projects{
-                grid-template-columns: 1fr !important;
-                gap: 20px;
-            }
-
-            nav a{
-                display:inline-block;
-                margin:8px 12px;
-            }
-
-            .achievement-row {
-                flex-direction: column;
-            }
-            
-            .header-row {
-                display: none;
-            }
-            
-            .col-left, .col-right {
-                width: 100% !important;
-                border-right: none;
-                padding: 12px 15px;
-            }
-            
-            .col-left {
-                background: #131a26;
-                color: #ffffff;
-                border-bottom: 1px solid rgba(35, 53, 84, 0.4);
-            }
-            
-            .col-right {
-                padding-bottom: 20px;
-            }
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #131a26;
+            color: #636366;
+            margin-top: 40px;
+            border-top: 2px solid #233554;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -310,51 +177,42 @@
 
 <div class="container">
 
-    <section id="about">
+    <div class="section-box about-section" id="about">
         <h2>About Me</h2>
-
-        <div class="about">
-            <img src="https://i.postimg.cc/fb9tYMzh/profile.jpg"alt="Profile Picture">
-
-            <div class="about-text">
-                <p>
-                    Hello buddies it's Harish here!
-                    I am an Information Technology student currently pursuing my Diploma.
-                    I have interest in core programming logic as well as web design and building things with clean structures.
-                    I enjoy taking academic concepts and turning them into functional application systems.
-                </p>
-            </div>
+        <img src="https://i.postimg.cc/fb9tYMzh/profile.jpg" alt="Profile Picture">
+        <div class="about-text">
+            <p>
+                Hello buddies it's Harish here!
+                I am an Information Technology student currently pursuing my Diploma.
+                I have interest in core programming logic as well as web design and building things with clean structures.
+                I enjoy taking academic concepts and turning them into functional application systems.
+            </p>
         </div>
-    </section>
+    </div>
 
-    <section id="projects">
+    <div class="section-box" id="projects">
         <h2>My Projects</h2>
 
-        <div class="projects">
-
-            <div class="card">
-                <h3>Library Management System</h3>
-                <p>A system focused on object-oriented structures built to handle book registration, tracking, issuing records and user databases effectively.</p>
-            </div>
-
-            <div class="card">
-                <h3>Car Rental Management System</h3>
-                <p>Developed an application handling core business logic, calculating rental durations, managing vehicle availability data and processing user bookings.</p>
-            </div>
-
-            <div class="card">
-                <h3>Personal Portfolio Website</h3>
-                <p>A responsive personal portfolio website built with a clean layout web interface using HTML, CSS and JavaScript.</p>
-            </div>
-
+        <div class="project-block">
+            <h4>Library Management System</h4>
+            <p>A system focused on object-oriented structures built to handle book registration, tracking, issuing records and user databases effectively.</p>
         </div>
-    </section>
 
-    <section id="skills">
+        <div class="project-block">
+            <h4>Car Rental Management System</h4>
+            <p>Developed an application handling core business logic, calculating rental durations, managing vehicle availability data and processing user bookings.</p>
+        </div>
+
+        <div class="project-block">
+            <h4>Personal Portfolio Website</h4>
+            <p>A responsive personal portfolio website built with a clean layout web interface using HTML, CSS and JavaScript.</p>
+        </div>
+    </div>
+
+    <div class="section-box" id="skills">
         <h2>Skills & Achievements</h2>
 
         <h3>Technical Skills</h3>
-
         <ul>
             <li>C++ Programming</li>
             <li>HTML5</li>
@@ -363,55 +221,30 @@
             <li>Core Software Design & Logic Development</li>
         </ul>
 
-        <h3 style="margin-top:30px;">Achievements</h3>
-
-        <div class="achievements-container">
-            <div class="achievement-row header-row">
-                <div class="col-left">Achievement</div>
-                <div class="col-right">Certification</div>
-            </div>
-            
-            <div class="achievement-row">
-                <div class="col-left"><strong>Deans List Award</strong></div>
-                <div class="col-right">Academic Excellence in IT Core Subjects</div>
-            </div>
-            
-            <div class="achievement-row">
-                <div class="col-left"><strong>Core Application Development Project</strong></div>
-                <div class="col-right">Successfully deployed Object-Oriented Rental & Management Software</div>
-            </div>
-            
-            <div class="achievement-row">
-                <div class="col-left"><strong>Responsive UI/UX Development Certification</strong></div>
-                <div class="col-right">Self-paced exploration of modern web layouts and styling rules</div>
-            </div>
+        <h3>Achievements</h3>
+        
+        <div class="achievement-card">
+            <div class="achievement-title">Human Computer Interaction</div>
+            <div>Learned the principles of user interface design, wireframing, and creating user-friendly digital layouts.</div>
         </div>
 
-    </section>
+        <div class="achievement-card">
+            <div class="achievement-title">C++ Programming</div>
+            <div>Built and tested core programming logic exercises using conditional statements, variables, and basic loops.</div>
+        </div>
 
-    <section id="contact" class="contact">
+        <div class="achievement-card">
+            <div class="achievement-title">Web Design Introduction</div>
+            <div>Learned basic HTML5 formatting and CSS structuring rules to build my very first web pages.</div>
+        </div>
+    </div>
 
+    <div class="section-box contact-links" id="contact">
         <h2>Contact Me</h2>
-
-        <p>Email:
-            <a href="mailto:mc240929399@student.unitar.my">
-                mc240929399@student.unitar.my
-            </a>
-        </p>
-
-        <p>Instagram:
-            <a href="https://www.instagram.com/hxrish_1111/#" target="_blank">
-                hxrish_1111
-            </a>
-        </p>
-
-        <p>GitHub:
-            <a href="https://github.com/harishraj1111/" target="_blank">
-                harishraj1111
-            </a>
-        </p>
-
-    </section>
+        <p>Email: <a href="mailto:mc240929399@student.unitar.my">mc240929399@student.unitar.my</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/hxrish_1111/#" target="_blank">hxrish_1111</a></p>
+        <p>GitHub: <a href="https://github.com/harishraj1111/" target="_blank">harishraj1111</a></p>
+    </div>
 
 </div>
 
@@ -419,5 +252,7 @@
     <p>&copy; Copyright Reserved 2026 Harish Raj </p>
 </footer>
 
+</body>
+</html>
 </body>
 </html>
